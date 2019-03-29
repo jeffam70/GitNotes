@@ -98,5 +98,20 @@ NOTE: Use email format to see the whole commit message, word-wrapped, on the scr
 [commit1]: / "The named commit point to compare against the virtual staged folder (if \"--staged\" given) or \"commit2\""
 [commit2]: / "The named commit point to compare against \"commit1\""
 
+* __git lfs ls-files__
+  > List the files being tracked and managed by Git LFS.  Files do not appear unless they’ve been committed. NOTE: Nonfunctional at the time of this writing.
+
+* __git describe__ __*[source][desc_source]*__
+  > Show the most recent tag that is reachable from __*source*__ with later commits suffixed.
+
+[desc_source]: / "The commit to get information on"
+
+## Modifying
+
+* __git lfs track__ {__*[filepattern]*__}…
+  > Add __*filepattern*__ to Git LFS’s tracking list (in .gitattributes).  Omit __*filepattern*__ to list all current patterns.
+
+[filepattern]: / "a string of path and filename, with or without wildcards, indicating the files that Git LFS should manage (instead of just Git).  Use apostrophes (single-quotes) around filepattern to prevent the shell from expanding wildcards into unexpected absolute names."
+
 []: / ""
 
