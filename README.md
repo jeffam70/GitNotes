@@ -6,8 +6,8 @@ This is a reference for commonly used or handy Git commands.  Much of it is prov
 |[Git Download (Windows)](https://git-for-windows.github.io/) (v2.18.0+ recommended) |[Pro Git Book](http://git-scm.com/book)                             |
 |[Git LFS (Windows)](https://git-lfs.github.com/)                                    |[Git LFS Tutorial](https://github.com/git-lfs/git-lfs/wiki/Tutorial)|
 
--------------------------------------------------------------------------------
-> 
+>-------------------------------------------------------------------------------
+>    
 > ## Legend
 > In the syntax statements below:  
 > * { } indicate optional arguments; do not type { } characters
@@ -19,7 +19,7 @@ This is a reference for commonly used or handy Git commands.  Much of it is prov
 >
 > [links]: / "hints"
 >
--------------------------------------------------------------------------------
+>-------------------------------------------------------------------------------
 
 ## Configuring (rare)
 * __config__  {[ [--system] | [--global] | [--local] ]}  [[--list] | {[--get]} __*[attribute]*__  {__*[value]*__}]  
