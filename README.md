@@ -6,7 +6,7 @@
 |[Git LFS (Windows)](https://git-lfs.github.com/)                                    |[Git LFS Tutorial](https://github.com/git-lfs/git-lfs/wiki/Tutorial)|
 
 ## Configuring (rare)
-* __config__  __{[__ [--system] __|__ [--global] __|__ [--local] __]}__  __[__[--list] | __{__[--get]__}__ __*[attribute]*__  __{____*[value]*____}]__  
+* __config__  {[ [--system] | [--global] | [--local] ]}  [[--list] | {[--get]} __*[attribute]*__  {__*[value]*__}]  
   > Set or get configuration *attribute value*.
 
 [--system]: / "indicates to apply to system settings; stored in <installfolder>/etc/gitconfig"
