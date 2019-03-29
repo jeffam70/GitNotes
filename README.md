@@ -72,15 +72,16 @@ This is a reference for commonly used or handy Git commands.  Much of it is prov
 * __lfs status__
   > Show status of repository with Git LFS details.  (Git LFS must be previously installed). 
 
-* __log__ {[-n]} {[--oneline]} {[--pretty]=__*[format]*__} {__*[since..until]*__} {[--after]=__*date*__} {[--before]=__*date*__} {[--reverse]} {[--graph]} ...  
+* __[git log]__ {[-n]} {[--oneline]} {[--format]=__*[fstring]*__} {__*[since..until]*__} {[--after]=__*date*__} {[--before]=__*date*__} {[--reverse]} {[--graph]} ...  
 ..... {[--grep]=”__*message*__”} 
 
   > Show commit history log.
 
+[git log]: https://git-scm.com/docs/git-log "Go to online docs"
 [-n]: / "-n limits display to n commits"
 [--oneline]: / "Displays a condensed history of the commits"
-[--pretty]: / "Formats the display"
-[format]: / "May be: oneline, short, medium, full, fuller, email, raw, and format:string.  
+[--format]: / "Formats the display"
+[fstring]: https://git-scm.com/docs/git-log#_pretty_formats "May be: oneline, short, medium, full, fuller, email, raw, and \"%str\".  
 NOTE: Use email format to see the whole commit message, word-wrapped, on the screen."
 [since..until]: / "Limits display to commits between named \"since\" and \"until\" points."
 [--after]: / "Limits display to commits after the given date"
