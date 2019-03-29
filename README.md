@@ -25,7 +25,7 @@ This is a reference for commonly used or handy Git commands.  Much of it is prov
 
 ## Configuring
 
-* __config__  {[ [--system] | [--global] | [--local] ]}  [[--list] | {[--get]} __*[attribute]*__  {__*[value]*__}]  
+* __git config__  {[ [--system] | [--global] | [--local] ]}  [[--list] | {[--get]} __*[attribute]*__  {__*[value]*__}]  
   > Set or get configuration *attribute value*.
 
 [--system]: / "Apply to system settings; stored in <installfolder>/etc/gitconfig"
@@ -38,20 +38,20 @@ This is a reference for commonly used or handy Git commands.  Much of it is prov
 
 ## Creating Projects
 
-* __init__  {[--bare]}  {__*[destination]*__}
+* __git init__  {[--bare]}  {__*[destination]*__}
   > Create new repository.  Defaults to current folder (automatically creating a .git/ subfolder).
 
-* __lfs install__
+* __git lfs install__
   > Add Git LFS hooks in repository.  (Git LFS must be previously installed).
 
-* __clone__ {[--bare]} __*[source]*__ {__*[destination]*__}
+* __git clone__ {[--bare]} __*[source]*__ {__*[destination]*__}
   > Copy (clone) a *source* repository into the current folder, or the *destination* subfolder.
 
 [--bare]: / "Create a repository with no working tree that is suitable for a remote repository; right in current folder (no .git/ subfolder)"
 [destination]: / "Optional subfolder destination.  When used with \"--bare\", convention is to end destination with \".git\""
 
 !!! Need to resolve exclusive switches/syntax !!!
-* __remote__ {[add]} {[rm]} {[prune]} {[rename] __*[oldname]*__} {[--verbose]}  __*[nickname]*__ {__*[source]*__}
+* __git remote__ {[add]} {[rm]} {[prune]} {[rename] __*[oldname]*__} {[--verbose]}  __*[nickname]*__ {__*[source]*__}
   > Manage tracked repositories.  (Leave off switches to see a list of remotes).
 
 [add]: / "Creates a new entry called \"nickname\" for a remote repository \"source\""
@@ -64,20 +64,20 @@ This is a reference for commonly used or handy Git commands.  Much of it is prov
 [source]: / "The url of the remote repository"
 
 ## Determining State
-* __status__ {[--short]}
+* __git status__ {[--short]}
   > Show status of repository (added, deleted, modified, untracked, copied, and renamed files)
 
 [--short]: / "Displays in a simplified format"
 
-* __lfs status__
+* __git lfs status__
   > Show status of repository with Git LFS details.  (Git LFS must be previously installed). 
 
-* __[git log]__ {[-n]} {[--oneline]} {[--format]=__*[fstring]*__} {__*[since..until]*__} {[--after]=__*date*__} {[--before]=__*date*__} {[--reverse]} {[--graph]} ...  
+* __[```git log```]__ {[-n]} {[--oneline]} {[--format]=__*[fstring]*__} {__*[since..until]*__} {[--after]=__*date*__} {[--before]=__*date*__} {[--reverse]} {[--graph]} ...  
 ..... {[--grep]=”__*message*__”} 
 
   > Show commit history log.
 
-[git log]: https://git-scm.com/docs/git-log "Go to online docs"
+[```git log```]: https://git-scm.com/docs/git-log "Go to online docs"
 [-n]: / "-n limits display to n commits"
 [--oneline]: / "Displays a condensed history of the commits"
 [--format]: / "Formats the display"
