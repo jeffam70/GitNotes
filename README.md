@@ -5,8 +5,8 @@
 |[Git Download (Windows)](https://git-for-windows.github.io/) (v2.18.0+ recommended) |[Pro Git Book](http://git-scm.com/book)                             |
 |[Git LFS (Windows)](https://git-lfs.github.com/)                                    |[Git LFS Tutorial](https://github.com/git-lfs/git-lfs/wiki/Tutorial)|
 
-## Configuring (_rare_)
-* __config__  {[ [--system] | [--global] | [--local] ]}  [[--list] | {[--get]} __*[attribute]*__  {__*[value]*__}]  
+## Configuring (rare)
+* __config__  __{[__ [--system] __|__ [--global] __|__ [--local] __]}__  __[__[--list] | __{__[--get]__}__ __*[attribute]*__  __{____*[value]*____}]__  
   > Set or get configuration *attribute value*.
 
 [--system]: / "indicates to apply to system settings; stored in <installfolder>/etc/gitconfig"
