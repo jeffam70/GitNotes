@@ -7,7 +7,7 @@ This is a reference for commonly used or handy Git commands.  Much of it is prov
 |[Git LFS (Windows)](https://git-lfs.github.com/)                                    |[Git LFS Tutorial](https://github.com/git-lfs/git-lfs/wiki/Tutorial)|
 
 -------------------------------------------------------------------------------
-
+> 
 > ## Legend
 > In the syntax statements below:  
 > * { } indicate optional arguments; do not type { } characters
@@ -16,9 +16,9 @@ This is a reference for commonly used or handy Git commands.  Much of it is prov
 > * normal text should be typed in exactly as shown
 > * *italic* text should be replaced with custom content
 > * > command descriptions appear like this
-
-[links]: / "hints"
-
+>
+> [links]: / "hints"
+>
 -------------------------------------------------------------------------------
 
 ## Configuring (rare)
@@ -34,13 +34,13 @@ This is a reference for commonly used or handy Git commands.  Much of it is prov
 [value]: / "Content to assign to the attribute"
 
 ## Creating Projects
-* __init__  {[--bare]}  {*[destination]*}
+* __init__  {[--bare]}  {__*[destination]*__}
   > Create new repository.  Defaults to current folder (automatically creating a .git/ subfolder).
 
 * __lfs install__
   > Add Git LFS hooks in repository.  (Git LFS must be previously installed.)
 
-* __clone__ {[--bare]} *source* {*[destination]*}
+* __clone__ {[--bare]} *source* {__*[destination]*__}
   > Copy (clone) a *source* repository into the current folder, or the *destination* subfolder.
 
 [--bare]: / "Create a repository with no working tree that is suitable for a remote repository; right in current folder (no .git/ subfolder)"
