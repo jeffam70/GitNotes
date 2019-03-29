@@ -72,12 +72,12 @@ This is a reference for commonly used or handy Git commands.  Much of it is prov
 * __git lfs status__
   > Show status of repository with Git LFS details.  (Git LFS must be previously installed). 
 
-* __[```git log```]__ {[-n]} {[--oneline]} {[--format]=__*[fstring]*__} {__*[since..until]*__} {[--after]=__*date*__} {[--before]=__*date*__} {[--reverse]} {[--graph]} ...  
+* __[git log]__ {[-n]} {[--oneline]} {[--format]=__*[fstring]*__} {__*[since..until]*__} {[--after]=__*date*__} {[--before]=__*date*__} {[--reverse]} {[--graph]} ...  
 ..... {[--grep]=”__*message*__”} 
 
   > Show commit history log.
 
-[```git log```]: https://git-scm.com/docs/git-log "Go to online docs"
+[git log]: https://git-scm.com/docs/git-log "Go to online docs"
 [-n]: / "-n limits display to n commits"
 [--oneline]: / "Displays a condensed history of the commits"
 [--format]: / "Formats the display"
@@ -90,8 +90,13 @@ NOTE: Use email format to see the whole commit message, word-wrapped, on the scr
 [--graph]: / "Displays commits with text-based graphical representation of relationship"
 [--grep]: / "Displays only commits that match a portion of the message"
 
+* __[git diff]__ {{[--staged]} [commit1]} {[commit2]}
+  > Display difference between two folders; by default, the working folder and virtual staged folder
 
-
+[git diff]: https://git-scm.com/docs/git-diff "Go to online docs"
+[--staged]: / "Shows difference between virtual staged folder and named \"commit1\""
+[commit1]: / "The named commit point to compare against the virtual staged folder (if \"--staged\" given) or \"commit2\""
+[commit2]: / "The named commit point to compare against \"commit1\""
 
 []: / ""
 
