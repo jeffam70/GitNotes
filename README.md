@@ -72,7 +72,9 @@ This is a reference for commonly used or handy Git commands.  Much of it is prov
 * __lfs status__
   > Show status of repository with Git LFS details.  (Git LFS must be previously installed). 
 
-* __log__ {[-n]} {[--oneline]} {[--pretty]=__*[format]*__} {__*[since..until]*__} {[--after]=__*date*__} {[--before]=__*date*__} {[--reverse]} {[--graph]} {[--grep]=”__*message*__”} 
+* __log__ {[-n]} {[--oneline]} {[--pretty]=__*[format]*__} {__*[since..until]*__} {[--after]=__*date*__} {[--before]=__*date*__} {[--reverse]} {[--graph]} ...  
+..... {[--grep]=”__*message*__”} 
+
   > Show commit history log.
 
 [-n]: / "-n limits display to n commits"
@@ -86,7 +88,6 @@ NOTE: Use email format to see the whole commit message, word-wrapped, on the scr
 [--reverse]: / "Displays commits in reverse order"
 [--graph]: / "Displays commits with text-based graphical representation of relationship"
 [--grep]: / "Displays only commits that match a portion of the message"
-[]: / ""
 
 
 
