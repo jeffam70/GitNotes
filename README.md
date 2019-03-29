@@ -8,6 +8,7 @@ This is a reference for commonly used or handy Git commands.  Much of it is prov
 |[Git LFS (Windows)](https://git-lfs.github.com/)                                    |[Git LFS Tutorial](https://github.com/git-lfs/git-lfs/wiki/Tutorial)|
 
 >-------------------------------------------------------------------------------
+>
 > ## Legend
 >
 > In the syntax statements below:  
@@ -19,6 +20,7 @@ This is a reference for commonly used or handy Git commands.  Much of it is prov
 > * > command descriptions appear like this
 >
 > [links]: / "hints"
+>
 >-------------------------------------------------------------------------------
 
 ## Configuring
