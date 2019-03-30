@@ -111,11 +111,11 @@ NOTE: Use email format to see the whole commit message, word-wrapped, on the scr
   > List the files being tracked and managed by Git LFS.  Files do not appear unless they’ve been committed.
     NOTE: Nonfunctional at the time of this writing.
 
-* __git describe__ __*[source][desc_source]*__
+* __git describe__ __*[commit][desc_commit]*__
 
-  > Show the most recent tag that is reachable from __*source*__ with later commits suffixed.
+  > Show the most recent tag that is reachable from __*commit*__ with later commits suffixed.
 
-[desc_source]: / "The commit to get information on"
+[desc_commit]: / "The commit to get information on"
 
 ## Modifying
 
@@ -141,14 +141,32 @@ NOTE: Use email format to see the whole commit message, word-wrapped, on the scr
 [--message]: / "Uses string for the commit message.  If not specified, the default editor starts up to accept the commit message.  Multiple \"--message\" parameters can be given, with each resulting in a new line in the commit message."
 [filename]: / "A specific path/file to commit.  If specified, this bypasses committing the current virtual staged folder."
 
-* __git tag__ {[--list][tag_list]} {[--delete]} __*[name]*__ {__*[source][tag_source]*__}
+* __git tag__ {[--list][tag_list]} {[--delete]} __*[name]*__ {__*[commit][tag_commit]*__}
 
-  > Create, list or delete a friendly name for a source commit.
+  > Create, list or delete a friendly name for a commit.
 
 [tag_list]: / "Show the existing tags that follow the \"name\" pattern, instead of creating one.  Omit --list (and name) to show all existing tags."
 [--delete]: / "Remove the named tag instead of creating it."
 [name]: / "The name to tag the commit with; must not contain spaces."
-[tag_source]: / "The commit to apply the tag to."
+[tag_commit]: / "The commit to apply the tag to."
+
+* __git branch__ {[--list][branch_list]} {[--all][branch_all]} {[--contains]} {[--remotes]} {[--delete][branch_delete]} {[--move] __*[oldname][branch_oldname]*__} {[--merged]} {[--no-merged]} ...  
+..... {[--verbose][branch_verbose]} __*[name][branch_name]*__ {__*[branch_commit]*__}
+
+  > Create, list or delete a branch from a commit.
+
+[branch_list]: / "Show the branches that follow the \"name\" pattern, instead of creating one.  Omit --list (and name) to show all existing branches."
+[branch_all]: / "Show local and remote-tracking branches."
+[--contains]: / "Show only branches that contain the indicated commit."
+[--remotes]: / "Show only remote-tracking branches.  May be combined with --delete."
+[branch_delete]: / "Remove the named (and fully merged) branch.  May be combined with --remotes."
+[--move]: / "Rename the \"oldname\" branch to \"name.\""
+[--merged]: / "Filters to show only branches whose tips are reachable by \"commit.\""
+[--no-merged]: / "Filters to show only branches whose tips are not reachable by \"commit.\""
+[branch_verbose]: / "When combined with \"--list,\" shows the SHA1 and commit subject line, along with relationship to upstream branch, if any."
+[branch_oldname]: / "The branch to rename."
+[branch_name]: / "The branch to affect."
+[branch_commit]: / "The commit to reference for the operation."
 
 
 
