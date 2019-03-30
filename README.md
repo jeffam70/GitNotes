@@ -54,7 +54,7 @@ This is a reference for commonly used or handy Git commands.  Much of it is prov
 [--bare]: / "Create a repository with no working tree that is suitable for a remote repository; right in current folder (no .git/ subfolder)"
 [destination]: / "Optional subfolder destination.  When used with \"--bare\", convention is to end destination with \".git\""
 
-!!! Need to resolve exclusive switches/syntax !!!
+__*!!! Need to resolve exclusive switches/syntax !!!*__
 * __git remote__ {[add]} {[rm]} {[prune]} {[rename] __*[oldname]*__} {[--verbose]}  __*[nickname]*__ {__*[source]*__}
 
   > Manage tracked repositories.  (Leave off switches to see a list of remotes).
@@ -80,7 +80,7 @@ This is a reference for commonly used or handy Git commands.  Much of it is prov
   > Show status of repository with Git LFS details.  (Git LFS must be previously installed). 
 
 * __[git log]__ {[-n]} {[--oneline]} {[--format]=__*[fstring]*__} {__*[since..until]*__} {[--after]=__*date*__} {[--before]=__*date*__} {[--reverse]} {[--graph]} ...  
-..... {[--grep]=”__*message*__”}
+..... {[--grep]="__*message*__"}
 
   > Show commit history log.
 
@@ -97,7 +97,7 @@ NOTE: Use email format to see the whole commit message, word-wrapped, on the scr
 [--graph]: / "Displays commits with text-based graphical representation of relationship"
 [--grep]: / "Displays only commits that match a portion of the message"
 
-* __[git diff]__ {{[--staged]} [commit1]} {[commit2]}
+* __[git diff]__ {{[--staged]} __*[commit1]*__} {__*[commit2]*__}
 
   > Display difference between two folders; by default, the working folder and virtual staged folder
 
@@ -108,7 +108,8 @@ NOTE: Use email format to see the whole commit message, word-wrapped, on the scr
 
 * __git lfs ls-files__
 
-  > List the files being tracked and managed by Git LFS.  Files do not appear unless they’ve been committed. NOTE: Nonfunctional at the time of this writing.
+  > List the files being tracked and managed by Git LFS.  Files do not appear unless they’ve been committed.
+    NOTE: Nonfunctional at the time of this writing.
 
 * __git describe__ __*[source][desc_source]*__
 
@@ -122,7 +123,35 @@ NOTE: Use email format to see the whole commit message, word-wrapped, on the scr
 
   > Add __*filepattern*__ to Git LFS’s tracking list (in .gitattributes).  Omit __*filepattern*__ to list all current patterns.
 
-[filepattern]: / "a string of path and filename, with or without wildcards, indicating the files that Git LFS should manage (instead of just Git).  Use apostrophes (single-quotes) around filepattern to prevent the shell from expanding wildcards into unexpected absolute names."
+[filepattern]: / "A string of path and filename, with or without wildcards, indicating the files that Git LFS should manage (instead of just Git).  Use apostrophes (single-quotes) around filepattern to prevent the shell from expanding wildcards into unexpected absolute names.  Multiple filepatterns may be specified."
+
+* __git add__ {[--all]} {[--force]} {__*[filepattern][add_filepattern]*__}…
+
+  > Add working tree’s file(s)/folder(s) contents to virtual staged folder.
+
+[--all]: / "Includes all new files, removes all deleted files, and updates all changed files in the virtual staged folder."
+[--force]: / "Adds \"filepattern\"-specified files that are otherwise ignored (as indicated by the .git/info/exclude file or the core.excludesfile configuration settings)."
+[add_filepattern]: / "A string of path and filename, with out without wildcards, indicating the files to add to the virtual stage folder.  If \"filepattern\" omitted, \".\" is assumed, meaning all files in current folder and subfolders.  Multiple filepatterns may be specified."
+
+* __git commit__ {[--amend]} {[--message] "__*string*__"}… {__*[filename]*__}…
+
+  > Commit the current virtual staged folder into the repository.
+
+[--amend]: / "Adjust the comment of the tip of the branch (the most recent commit)."
+[--message]: / "Uses string for the commit message.  If not specified, the default editor starts up to accept the commit message.  Multiple \"--message\" parameters can be given, with each resulting in a new line in the commit message."
+[filename]: / "A specific path/file to commit.  If specified, this bypasses committing the current virtual staged folder."
+
+* __git tag__ {[--list][tag_list]} {[--delete]} __*[name]*__ {__*[source][tag_source]*__}
+
+  > Create, list or delete a friendly name for a source commit.
+
+[tag_list]: / "Show the existing tags that follow the \"name\" pattern, instead of creating one.  Omit --list (and name) to show all existing tags."
+[--delete]: / "Remove the named tag instead of creating it."
+[name]: / "The name to tag the commit with; must not contain spaces."
+[tag_source]: / "The commit to apply the tag to."
+
+
+
 
 []: / ""
 
