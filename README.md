@@ -54,7 +54,7 @@ This is a reference for commonly used or handy Git commands.  Much of it is prov
 [--bare]: / "Create a repository with no working tree that is suitable for a remote repository; right in current folder (no .git/ subfolder)"
 [destination]: / "Optional subfolder destination.  When used with \"--bare\", convention is to end destination with \".git\""
 
-__*!!! Need to resolve exclusive switches/syntax !!!*__
+__*!!!! Need to resolve exclusive switches/syntax !!!!*__
 * __git remote__ {[add]} {[rm]} {[prune]} {[rename] __*[oldname]*__} {[--verbose]}  __*[nickname]*__ {__*[source]*__}
 
   > Manage tracked repositories.  (Leave off switches to see a list of remotes).
